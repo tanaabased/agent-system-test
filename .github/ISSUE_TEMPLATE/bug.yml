@@ -1,6 +1,6 @@
-name: "Bug"
+name: "Bug report"
 description: "Propose a canonical bug with enough evidence for triage and estimation."
-type: "Bug"
+type: "bug"
 body:
   - type: "markdown"
     attributes:
