@@ -56,7 +56,7 @@ body:
       label: "Urgency assessment"
       description: "Select only when the task evidence supports this assessment; otherwise leave unset."
       options:
-        - "None"
+        - "Not time-sensitive"
         - "Moderate"
         - "High"
         - "Immediate"
@@ -68,7 +68,7 @@ body:
       label: "Enablement assessment"
       description: "Select only when the task evidence supports this assessment; otherwise leave unset."
       options:
-        - "None"
+        - "No enabling effect"
         - "Some"
         - "Substantial"
         - "Foundational"
