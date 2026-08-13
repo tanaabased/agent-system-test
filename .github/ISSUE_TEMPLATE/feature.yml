@@ -1,0 +1,99 @@
+name: "Feature"
+description: "Propose a canonical feature with enough evidence for triage and estimation."
+type: "Feature"
+body:
+  - type: "markdown"
+    attributes:
+      value: "Provide supported evidence and leave uncertain estimates unset. Task score is calculated after submission; do not calculate it here."
+  - type: "textarea"
+    id: "problem"
+    attributes:
+      label: "Problem or opportunity"
+      description: "Describe the capability gap or opportunity, affected users, recurring value, urgency, and work this could enable."
+    validations:
+      required: true
+  - type: "textarea"
+    id: "desired-outcome"
+    attributes:
+      label: "Desired outcome"
+      description: "Describe the supported outcome without prescribing unnecessary implementation detail."
+    validations:
+      required: true
+  - type: "textarea"
+    id: "in-scope"
+    attributes:
+      label: "In scope"
+      description: "List the concrete behavior or surfaces this task includes, one item per line."
+      placeholder: "One item per line"
+    validations:
+      required: true
+  - type: "textarea"
+    id: "out-of-scope"
+    attributes:
+      label: "Out of scope"
+      description: "List adjacent work this task deliberately excludes, one item per line."
+      placeholder: "One item per line"
+    validations:
+      required: true
+  - type: "textarea"
+    id: "acceptance-criteria"
+    attributes:
+      label: "Acceptance criteria"
+      description: "List observable completion conditions, one item per line."
+      placeholder: "One item per line"
+    validations:
+      required: true
+  - type: "textarea"
+    id: "alternatives"
+    attributes:
+      label: "Alternatives and constraints"
+      description: "Record meaningful alternatives, compatibility requirements, and other constraints."
+    validations:
+      required: false
+  - type: "dropdown"
+    id: "urgency"
+    attributes:
+      label: "Urgency assessment"
+      description: "Select only when the task evidence supports this assessment; otherwise leave unset."
+      options:
+        - "None"
+        - "Moderate"
+        - "High"
+        - "Immediate"
+    validations:
+      required: false
+  - type: "dropdown"
+    id: "enablement"
+    attributes:
+      label: "Enablement assessment"
+      description: "Select only when the task evidence supports this assessment; otherwise leave unset."
+      options:
+        - "None"
+        - "Some"
+        - "Substantial"
+        - "Foundational"
+    validations:
+      required: false
+  - type: "dropdown"
+    id: "confidence"
+    attributes:
+      label: "Confidence assessment"
+      description: "Select only when the task evidence supports this assessment; otherwise leave unset."
+      options:
+        - "Low"
+        - "Medium"
+        - "High"
+    validations:
+      required: false
+  - type: "checkboxes"
+    id: "task-signals"
+    attributes:
+      label: "Task signals"
+      description: "Select only statements directly supported by the submission. Canonical labels are applied later only when their repository definitions exist."
+      options:
+        - label: "Breaking change"
+        - label: "Maintainers welcome outside contributions"
+        - label: "Suitable for a first contribution"
+        - label: "Blocked by an external dependency"
+    validations:
+      required: false
