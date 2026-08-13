@@ -1,6 +1,6 @@
 name: "Task"
 description: "Propose a canonical task with enough evidence for triage and estimation."
-type: "Task"
+type: "task"
 body:
   - type: "markdown"
     attributes:
