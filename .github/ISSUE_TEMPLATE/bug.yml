@@ -1,0 +1,96 @@
+name: "Bug"
+description: "Propose a canonical bug with enough evidence for triage and estimation."
+type: "Bug"
+body:
+  - type: "markdown"
+    attributes:
+      value: "Provide supported evidence and leave uncertain estimates unset. Task score is calculated after submission; do not calculate it here."
+  - type: "textarea"
+    id: "observed-behavior"
+    attributes:
+      label: "Observed behavior"
+      description: "Describe what happens now, including affected versions, frequency, and blast radius when known."
+    validations:
+      required: true
+  - type: "textarea"
+    id: "expected-behavior"
+    attributes:
+      label: "Expected behavior"
+      description: "Describe the behavior that should occur instead."
+    validations:
+      required: true
+  - type: "textarea"
+    id: "reproduction"
+    attributes:
+      label: "Reproduction or evidence"
+      description: "Provide reproducible steps or other direct evidence. Include commands, versions, and outputs when useful."
+    validations:
+      required: true
+  - type: "textarea"
+    id: "environment"
+    attributes:
+      label: "Environment"
+      description: "Record relevant versions, operating systems, runtimes, or configuration."
+    validations:
+      required: false
+  - type: "textarea"
+    id: "impact-summary"
+    attributes:
+      label: "Impact"
+      description: "Explain affected users or workflows, frequency, severity, urgency, and whether other work is blocked."
+    validations:
+      required: true
+  - type: "textarea"
+    id: "acceptance-criteria"
+    attributes:
+      label: "Acceptance criteria"
+      description: "List observable completion conditions, one item per line."
+      placeholder: "One item per line"
+    validations:
+      required: true
+  - type: "dropdown"
+    id: "urgency"
+    attributes:
+      label: "Urgency assessment"
+      description: "Select only when the task evidence supports this assessment; otherwise leave unset."
+      options:
+        - "None"
+        - "Moderate"
+        - "High"
+        - "Immediate"
+    validations:
+      required: false
+  - type: "dropdown"
+    id: "enablement"
+    attributes:
+      label: "Enablement assessment"
+      description: "Select only when the task evidence supports this assessment; otherwise leave unset."
+      options:
+        - "None"
+        - "Some"
+        - "Substantial"
+        - "Foundational"
+    validations:
+      required: false
+  - type: "dropdown"
+    id: "confidence"
+    attributes:
+      label: "Confidence assessment"
+      description: "Select only when the task evidence supports this assessment; otherwise leave unset."
+      options:
+        - "Low"
+        - "Medium"
+        - "High"
+    validations:
+      required: false
+  - type: "checkboxes"
+    id: "task-signals"
+    attributes:
+      label: "Task signals"
+      description: "Select only statements directly supported by the submission. Canonical labels are applied later only when their repository definitions exist."
+      options:
+        - label: "Regression from previously working behavior"
+        - label: "Maintainers welcome outside contributions"
+        - label: "Blocked by an external dependency"
+    validations:
+      required: false
