@@ -1,6 +1,6 @@
 name: "Feature"
 description: "Propose a canonical feature with enough evidence for triage and estimation."
-type: "Feature"
+type: "feature"
 body:
   - type: "markdown"
     attributes:
